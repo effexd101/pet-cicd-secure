@@ -278,8 +278,8 @@ jobs:
       - name: Scan image with Trivy
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: |
-            ${{ steps.login-ecr.outputs.registry }}/\
+          image-ref: 
+            ${{ steps.login-ecr.outputs.registry }}/
             ${{ env.ECR_REPOSITORY }}:${{ github.sha }}
           format: table
           exit-code: '0'
